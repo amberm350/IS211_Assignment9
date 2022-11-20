@@ -13,7 +13,7 @@ if __name__ == "__main__":
     
     soup = BeautifulSoup(url_text, features="html.parser")
 
-    result_table = soup.find_all('table', class_="sortable plainrowheaders wikitable")
+    result_table = soup.find_all('table', class_="wikitable sortable")
     rows = result_table[0].find_all('tr')
     headers = rows[0].find_all('th')
     print(
